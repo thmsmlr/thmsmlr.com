@@ -1,6 +1,7 @@
 ---
 title: Distributed Tracing, from zero to one
 date: '2019-03-13'
+description: Getting your organization to have distributed tracing end to end.
 ---
 So you've probably heard of distributed tracing by this point.
 We quickly went from it being a niche, new thing to the thing everyone is talking about.

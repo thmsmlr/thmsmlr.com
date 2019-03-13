@@ -50,6 +50,8 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "now-build": "gatsby build",
+    "deploy": "yarn build && cp now.json public/ && cd public && now",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
