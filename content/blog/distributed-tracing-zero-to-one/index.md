@@ -11,7 +11,8 @@ You can ship your org chart and monitor it too.
 The issue is that for most organizations it requires a monumental effort to get your systems instrumented.
 Distributed tracing is only useful when you have close to full coverage of your system.
 Otherwise, while you are debugging an issue you'll hit a wall.
-The traces will have huge gaps, black boxes representing all the work done by other services.
+The traces will have huge gaps. 
+There will be black boxes representing all the work done by other services.
 No visibility.
 
 ![Good traces vs Bad Traces](./traces.png)
