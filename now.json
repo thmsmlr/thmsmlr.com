@@ -11,7 +11,7 @@
     },
     {
       "src": "/images/(.*)",
-      "headers": { "cache-control": "s-maxage=604800,maxage=604800" },
+      "headers": { "cache-control": "s-maxage=604800, max-age=604800, public" },
       "dest": "/images/$1"
     }
   ]
