@@ -32,7 +32,7 @@ const Page = () => (
 );
 
 Page.title = 'Leverage the Selfish';
-Page.date = new Date('2019-11-10');
+Page.date = new Date('2019-11-10 10:00');
 Page.description =
   "If there's one thing you can take to the bank it's that people are selfish. Leverage that to build great software.";
 Page.link = '/blog/leverage-the-selfish';
