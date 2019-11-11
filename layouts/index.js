@@ -2,13 +2,6 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 
 export default ({ children }) => {
-  // Ensure service workers from old Gatsby site are removed
-  if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    window.navigator.serviceWorker.getRegistrations().then(registrations => {
-      registrations.forEach(r => r.unregister());
-    });
-  }
-
   return (
     <>
       <Head>
@@ -23,6 +16,16 @@ export default ({ children }) => {
             gtag('js', new Date());
 
             gtag('config', 'UA-30455574-1');
+          `}
+        </script>
+        <script>
+          {`
+              // Ensure service workers from old Gatsby site are removed
+              if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+                window.navigator.serviceWorker.getRegistrations().then(registrations => {
+                  registrations.forEach(r => r.unregister());
+                });
+              }
           `}
         </script>
       </Head>
