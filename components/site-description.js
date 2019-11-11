@@ -2,7 +2,7 @@ export default () => (
   <div className="root">
     <img src="/images/profile-pic.jpg" />
     <p>
-      Personal blog by{' '}
+      Personal blog of{' '}
       <a target="_blank" href="https://twitter.com/thmsmlr">
         Thomas Millar
       </a>
