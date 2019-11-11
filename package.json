@@ -1,0 +1,21 @@
+{
+  "name": "thmsmlr.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "next": "9.1.2",
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
+  }
+}
