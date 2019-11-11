@@ -3,13 +3,11 @@ import Head from 'next/head';
 
 export default ({ children }) => {
   // Ensure service workers from old Gatsby site are removed
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      window.navigator.serviceWorker.getRegistrations().then(registrations => {
-        registrations.forEach(r => r.unregister());
-      });
-    }
-  }, []);
+  if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+    window.navigator.serviceWorker.getRegistrations().then(registrations => {
+      registrations.forEach(r => r.unregister());
+    });
+  }
 
   return (
     <>
