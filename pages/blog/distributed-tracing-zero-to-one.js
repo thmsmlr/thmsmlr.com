@@ -89,6 +89,6 @@ Page.date = new Date('2019-04-26');
 Page.description = "You don't need a company wide strategic initiative.";
 Page.link = '/blog/distributed-tracing-zero-to-one';
 Page.readTimeInMinutes = 3;
-Page.imageUrl = '/images/traces.png';
+Page.imageUrl = 'https://thmsmlr.com/images/traces.png';
 
 export default Page;

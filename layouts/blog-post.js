@@ -12,7 +12,7 @@ export default ({ post, children }) => (
       <meta name="twitter:creator" content="@thmsmlr" />
       <meta property="og:title" content={post.title} />
       <meta property="og:description" content={post.description} />
-      <meta property="og:image" content={`https://thmsmlr.com${post.imageUrl}`} />
+      <meta property="og:image" content={post.imageUrl} />
     </Head>
     <div className="wrapper">
       <h3>
