@@ -15,7 +15,7 @@ const Page = () => (
       huge gaps. There will be black boxes representing all the work done by other services. No
       visibility.
     </p>
-    <img src="/traces.png" />
+    <img src="/images/traces.png" />
     <p>
       So how do you go from no tracing to a fully traced system? You have an interesting cold start
       problem on your hands. You could make it a company-wide initiative. You could get all your
@@ -86,9 +86,9 @@ const Page = () => (
 
 Page.title = 'Distributed Tracing, from zero to one';
 Page.date = '2019-04-26';
-Page.description = "You don't a company wide strategic initiative.";
+Page.description = "You don't need a company wide strategic initiative.";
 Page.link = '/blog/distributed-tracing-zero-to-one';
 Page.readTimeInMinutes = 3;
-Page.imageUrl = '/traces.png';
+Page.imageUrl = '/images/traces.png';
 
 export default Page;

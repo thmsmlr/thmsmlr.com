@@ -38,11 +38,11 @@ const Page = () => (
         </div>
       ))}
     </div>
-    <style jsx>
+    <style jsx global>
       {`
         .wrapper {
           margin: 0 auto;
-          width: 750px;
+          max-width: 750px;
           padding: 0 25px 200px;
         }
 

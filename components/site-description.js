@@ -1,6 +1,6 @@
 export default () => (
   <div className="root">
-    <img src="/profile-pic.jpg" />
+    <img src="/images/profile-pic.jpg" />
     <p>
       Personal blog by{' '}
       <a target="_blank" href="https://twitter.com/thmsmlr">
