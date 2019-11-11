@@ -4,7 +4,10 @@ import Link from 'next/link';
 import Layout from '../layouts';
 import SiteDescription from '../components/site-description';
 
-const Posts = [require('./blog/distributed-tracing-zero-to-one').default];
+const Posts = [
+  require('./blog/leverage-the-selfish').default,
+  require('./blog/distributed-tracing-zero-to-one').default
+];
 
 const Page = () => (
   <Layout>
@@ -44,6 +47,10 @@ const Page = () => (
           margin: 0 auto;
           max-width: 750px;
           padding: 0 25px 200px;
+        }
+
+        .post {
+          margin-bottom: 4em;
         }
 
         h1 {

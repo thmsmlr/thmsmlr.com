@@ -85,7 +85,7 @@ const Page = () => (
 );
 
 Page.title = 'Distributed Tracing, from zero to one';
-Page.date = '2019-04-26';
+Page.date = new Date('2019-04-26');
 Page.description = "You don't need a company wide strategic initiative.";
 Page.link = '/blog/distributed-tracing-zero-to-one';
 Page.readTimeInMinutes = 3;
