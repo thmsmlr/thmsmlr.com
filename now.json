@@ -12,7 +12,7 @@
     {
       "src": "/images/(.*)",
       "headers": { "cache-control": "s-maxage=604800" },
-      "dest": "/public/images/$1"
+      "dest": "/images/$1"
     }
   ]
 }
