@@ -8,7 +8,6 @@
       "src": "/distributed-tracing-zero-to-one",
       "status": 308,
       "headers": { "Location": "/blog/distributed-tracing-zero-to-one" }
-    },
-    { "src": "/redirect", "status": 308, "headers": { "Location": "https://zeit.co/" } }
+    }
   ]
 }
