@@ -5,6 +5,7 @@ import Layout from '../layouts';
 import SiteDescription from '../components/site-description';
 
 const Posts = [
+  require('./blog/well-that-was-unexpected').default,
   require('./blog/leverage-the-selfish').default,
   require('./blog/distributed-tracing-zero-to-one').default
 ];
