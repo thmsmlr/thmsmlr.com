@@ -223,6 +223,6 @@ Page.description =
   'When the internet hugs you, it can be hard to breath. The story of how Bill Clinton Swag went from nothing to a viral sensation. How I kept things up and running';
 Page.link = '/blog/well-that-was-unexpected';
 Page.readTimeInMinutes = 7;
-Page.imageUrl = 'https://thmsmlr.com/images/traces.png';
+Page.imageUrl = 'https://thmsmlr.com/images/billclintonswag-original.png';
 
 export default Page;
