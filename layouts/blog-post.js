@@ -8,7 +8,7 @@ export default ({ post, children }) => (
   <Layout>
     <Head>
       <title>thmsmlr – {post.title}</title>
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@thmsmlr" />
       <meta property="og:title" content={post.title} />
       <meta property="og:description" content={post.description} />
