@@ -10,8 +10,8 @@ const Page = () => (
     <p>
       One night I was cooking dinner with my roommates and he mentioned that his little brother was
       tumblr famous. This was crazy to me. I had never met anyone remotely internet famous. We
-      pulled up his tumblr blog and there it was. We scrolled a bit. Some great memes. Then there it
-      was, <a href="https://billclintonswag.com">Bill Clinton Swag</a>.
+      pulled up his tumblr blog, and scrolled a bit. Some great memes. Then there it was,{' '}
+      <a href="https://billclintonswag.com">Bill Clinton Swag</a>.
     </p>
     <img src="/images/billclintonswag-original.png" />
     <p>
@@ -21,7 +21,11 @@ const Page = () => (
     </p>
     <p>
       I spent two days going through some tutorials, scraped together some code from stackoverflow,
-      learned the math behind perspective transforms, bought the domain and we were live.
+      learned the math behind{' '}
+      <a href="https://en.wikipedia.org/wiki/3D_projection#Perspective_projection">
+        perspective transforms
+      </a>
+      , bought the domain and we were live.
     </p>
     <img src="/images/billclintonswag-site-original.png" />
     <p>
@@ -36,10 +40,7 @@ const Page = () => (
       thousand page views or so. It was 2011, and I was 18 years old and this was the first thing I
       had put on the internet. I was thrilled! I logged off, went to bed.
     </p>
-    <p>
-      A few days passed. I periodically checked the analytics. My 15 minutes of fame were up. Back
-      to that statistics class.
-    </p>
+    <p>A few days passed. I periodically checked the analytics. Back to that statistics class.</p>
     <p>
       It was a few years before I thought about Bill Clinton Swag again. I was doing an internship
       in New York, and my sisters were down to visit. We were grabbing a slice and my sister asked
@@ -58,8 +59,8 @@ const Page = () => (
     <p>
       I throw out the code and start fresh. The site will still be as simple as the original, but
       it'll be mobile friendly. Also I'll use the latest CSS 3dmatrix transform trickery to give you
-      the ability to preview the final swag before it's rendered. Few weeks an hour here and there
-      and I have it done. The site is back online.
+      the ability to preview the final swag before it's rendered. Few weeks later, an hour here and
+      there, and I have it done. The site is back online.
     </p>
     <img src="/images/billclintonswag-site-mobile.png" />
     <p>
@@ -71,7 +72,7 @@ const Page = () => (
     <p>This time around however, I remember to check the analytics more frequently.</p>
     <p>
       It was April. The middle of the pandemic. It started happening again. This time, however, it
-      wasn't Brazil that loved the site. It was Poland.
+      wasn't Brazil. It was Poland.
     </p>
     <img src="/images/bcs-analytics-poland.png" />
     <p>
@@ -133,7 +134,7 @@ const Page = () => (
     <p>
       This is when the folks at <a href="https://vercel.com">Vercel</a> jumped in to save the day.{' '}
       <a href="https://twitter.com/timer150">Joe Haddad</a> walked me through how to better use
-      their built in CDN to try to get more cache hits on the lambda function instead of invoking it
+      their built-in CDN to try to get more cache hits on the lambda function instead of invoking it
       for every search query. The theory was that most people are searching for top-40 music so
       there will probably be a decent cache hit rate limiting the number of times the lambda was
       invoked. It worked beautifully.
@@ -154,7 +155,7 @@ const Page = () => (
     <p>
       Luckily, when I DM'd him, he was actually super supportive. He congratulated my on the
       success, but mentioned that if it went on for too much longer he was going to have to pull
-      access from remote embedding of their images.
+      access from remote embedding of their album artwork images.
     </p>
     <p>
       Apparently I was generating 5 times the amount of traffic to their CDN than their own users!
@@ -166,9 +167,8 @@ const Page = () => (
     </p>
     <img src="/images/bcs-lastfm-cdn-traffic.png" />
     <p>
-      At this point I was ready to take a break, a week glued to Twitter and Google Analytics,
-      fixing bugs. It was time to put away VIM and just scroll through Instagram and see what people
-      were saying
+      A week glued to Twitter and Google Analytics, fixing bugs, I was ready to take a break. It was
+      time to put away VIM and just scroll through Instagram and see what people were saying.
     </p>
     <h3>Memorable Posts</h3>
     <p>
@@ -201,9 +201,9 @@ const Page = () => (
     <h3>Conclusion</h3>
     <p>
       Well it was a fun 15 minute. I really want to thank the folks at{' '}
-      <a href="https://vercel.com">Vercel</a> and <a href="https://last.fm">Last.FM</a> for bank
-      rolling the meme. You didn't ask to, but it was very generous that you didn't shut me down. I
-      appreciate that.
+      <a href="https://vercel.com">Vercel</a> and <a href="https://last.fm">Last.FM</a> for
+      bankrolling the meme. You didn't ask to, but it was very generous that you didn't shut me
+      down. I appreciate that.
     </p>
     <p>
       If you're an engineer and want the tldr to make something scale. Put it on Vercel, make the
