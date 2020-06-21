@@ -206,7 +206,7 @@ const Page = () => (
       appreciate that.
     </p>
     <p>
-      If you're an engineer and what the tldr to make something scale. Put it on Vercel, make the
+      If you're an engineer and want the tldr to make something scale. Put it on Vercel, make the
       website static, cache as many API endpoints as possible. Watch your metrics, there's always
       another optimization.
     </p>
