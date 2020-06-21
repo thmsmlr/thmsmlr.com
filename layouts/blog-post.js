@@ -31,7 +31,7 @@ export default ({ post, children }) => (
           • {'☕️'.repeat(Math.ceil(post.readTimeInMinutes / 10))} {post.readTimeInMinutes} min read
         </span>
       </header>
-      {children}
+      <main>{children}</main>
       <p>
         <a
           target="_blank"
@@ -109,6 +109,10 @@ export default ({ post, children }) => (
           color: hsla(0, 0%, 0%, 0.59);
           font-style: italic;
           border-left: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
+        }
+        main img {
+          display: block;
+          margin: 2rem auto;
         }
       `}
     </style>
