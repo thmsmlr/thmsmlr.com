@@ -176,9 +176,9 @@ const Page = () => (
       able to enjoy the moment. I got some time and started scrolling through some of the posts and
       found that people were starting to recreate the image with their own record collections.
     </p>
-    <img src="/images/bcs-image-recreation.png" style={{ maxWidth: '400px' }} />
+    <img src="/images/bcs-image-recreation.png" style={{ width: '400px' }} />
     <p>Even LL Cool J made a Bill Clinton Swag.</p>
-    <img src="/images/bcs-ll-cool-j.jpeg" style={{ maxWidth: '400px' }} />
+    <img src="/images/bcs-ll-cool-j.jpeg" style={{ width: '400px' }} />
     <p>
       I guess I really knew that the website made it when bloggers started writing{' '}
       <a href="https://mashable.com/article/bill-clinton-swag-meme/">opinion pieces</a> about how
