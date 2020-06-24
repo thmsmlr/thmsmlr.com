@@ -22,7 +22,7 @@ export default function Page({ posts }) {
           <div className="mt-12" key={post.Name}>
             <header>
               <h2>
-                <Link href={`/blog/${post.Slug}`}>
+                <Link href="/blog/[slug]" as={`/blog/${post.Slug}`}>
                   <a className="text-2xl leading-snug font-medium text-blue-600 cursor-pointer">
                     {post.Name}
                   </a>
