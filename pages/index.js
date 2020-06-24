@@ -12,6 +12,7 @@ export default function Page({ posts }) {
     <Layout>
       <Head>
         <title>thmsmlr – All posts</title>
+        <link rel="stylesheet" href="/css/notion.css" />
       </Head>
       <div className="max-w-screen-md mx-auto px-2 md:px-4">
         <h1 className="mt-8 text-4xl font-semibold leading-none">thmsmlr</h1>
