@@ -16,7 +16,10 @@ export default function Page({ post, metadata }) {
         <meta name="twitter:creator" content="@thmsmlr" />
         <meta property="og:title" content={metadata.Name} />
         <meta property="og:description" content={metadata.Description} />
-        <meta property="og:image" content={metadata.PreviewImage} />
+        <meta
+          property="og:image"
+          content={`https://www.notion.so/image/${encodeURIComponent(metadata.PreviewImage)}`}
+        />
       </Head>
       <div className="max-w-screen-sm mx-auto px-2 md:px-4">
         <h1 className="mt-4 text-xl font-semibold leading-none">
