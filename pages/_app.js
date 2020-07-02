@@ -6,7 +6,12 @@ export default ({ Component, pageProps }) => {
     <>
       <Head>
         <link rel="shortcut icon" href="/images/icon.png" />
-        <link rel="alternate" type="application/rss+xml" href="/api/rss" title="RSS feed" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/api/rss"
+          title="Thomas Millar's blog"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30455574-1"></script>
         <script
