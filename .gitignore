@@ -25,3 +25,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+public/rss.xml
+public/sitemap.xml
