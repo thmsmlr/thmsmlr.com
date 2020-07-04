@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { NotionRenderer } from 'react-notion';
+import 'prismjs/components/prism-bash';
 
 import Layout from 'layouts';
 import SiteDescription from 'components/site-description';
