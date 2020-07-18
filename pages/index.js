@@ -19,7 +19,7 @@ export default function Page({ posts }) {
         <div className="my-8">
           <SiteDescription />
         </div>
-        {posts.map(post => (
+        {posts.map((post) => (
           <div className="mt-12" key={post.Name}>
             <header>
               <h2>
@@ -34,7 +34,7 @@ export default function Page({ posts }) {
                   {new Date(post.PublishedOn).toLocaleString('en-US', {
                     month: 'long',
                     day: 'numeric',
-                    year: 'numeric'
+                    year: 'numeric',
                   })}
                 </span>
                 <span>•</span>
@@ -55,10 +55,12 @@ export default function Page({ posts }) {
 }
 
 export async function getStaticProps(ctx) {
-  const posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
+  let posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
+  posts = posts.filter((x) => x.isPublished);
+
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   };
 }
