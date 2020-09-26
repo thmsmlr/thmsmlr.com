@@ -6,6 +6,7 @@ import 'prismjs/components/prism-bash';
 import Layout from 'layouts';
 import SiteDescription from 'components/site-description';
 import { getPage, getTable } from 'lib/notion';
+import slugify from 'lib/slugify';
 
 export default function Page({ post, metadata }) {
   return (
@@ -40,7 +41,7 @@ export default function Page({ post, metadata }) {
                   {new Date(metadata.PublishedOn).toLocaleString('en-US', {
                     month: 'long',
                     day: 'numeric',
-                    year: 'numeric'
+                    year: 'numeric',
                   })}
                 </span>
                 <span>•</span>
@@ -78,21 +79,21 @@ export default function Page({ post, metadata }) {
 export async function getStaticPaths() {
   const posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
   return {
-    paths: posts.map(x => ({
-      params: { slug: x.Slug }
+    paths: posts.map((x) => ({
+      params: { slug: x.Slug || slugify(x.Name) },
     })),
-    fallback: false
+    fallback: false,
   };
 }
 
 export async function getStaticProps(ctx) {
   const posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
-  const post = posts.find(x => x.Slug === ctx.params.slug);
+  const post = posts.find((x) => x.Slug === ctx.params.slug);
   const pageId = post.id;
   return {
     props: {
       post: await getPage(pageId),
-      metadata: post
-    }
+      metadata: post,
+    },
   };
 }
