@@ -79,9 +79,11 @@ export default function Page({ post, metadata }) {
 export async function getStaticPaths() {
   const posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
   return {
-    paths: posts.map((x) => ({
-      params: { slug: x.Slug || slugify(x.Name) },
-    })),
+    paths: posts
+      .filter((x) => x.isPublished)
+      .map((x) => ({
+        params: { slug: x.Slug },
+      })),
     fallback: false,
   };
 }
