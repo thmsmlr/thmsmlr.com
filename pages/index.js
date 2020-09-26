@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import Layout from '../layouts';
 import SiteDescription from '../components/site-description';
-import { getPage, getTable } from 'lib/notion';
 
 const Posts = [];
 
@@ -55,7 +54,12 @@ export default function Page({ posts }) {
 }
 
 export async function getStaticProps(ctx) {
-  let posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
+  let resp;
+  resp = await fetch(
+    'https://notion-api.splitbee.io/v1/table/4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f'
+  );
+
+  let posts = await resp.json();
   posts = posts.filter((x) => x.isPublished);
 
   return {
