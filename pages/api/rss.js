@@ -1,7 +1,9 @@
-import { getTable } from 'lib/notion';
-
 export default async (req, res) => {
-  const posts = await getTable('4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f');
+  let resp;
+  resp = await fetch(
+    'https://notion-api.splitbee.io/v1/table/4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f'
+  );
+  let posts = await resp.json();
   const now = new Date();
   res.setHeader('Content-Type', 'application/rss+xml');
   res.setHeader('Cache-Control', 'maxage=0, s-maxage=600');
@@ -17,7 +19,7 @@ export default async (req, res) => {
     </channel>
     ${posts
       .map(
-        post =>
+        (post) =>
           `
       <item>
         <title>${post.Name}</title>
