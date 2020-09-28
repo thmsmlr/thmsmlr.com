@@ -4,6 +4,7 @@ export default async (req, res) => {
     'https://notion-api.splitbee.io/v1/table/4eb4df60-9e1c-4e8d-a3ef-29f24e7f555f'
   );
   let posts = await resp.json();
+  posts = posts.filter((x) => x.isPublished);
   const now = new Date();
   res.setHeader('Content-Type', 'application/rss+xml');
   res.setHeader('Cache-Control', 'maxage=0, s-maxage=600');
