@@ -66,5 +66,6 @@ export async function getStaticProps(ctx) {
     props: {
       posts,
     },
+    revalidate: 1,
   };
 }
