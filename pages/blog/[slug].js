@@ -1,12 +1,20 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { NotionRenderer } from 'react-notion';
 import 'prismjs/components/prism-bash';
 
 import Layout from 'layouts';
 import SiteDescription from 'components/site-description';
+import slugify from 'lib/slugify';
 
 export default function Page({ post, metadata }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Layout>
       <Head>
@@ -82,9 +90,9 @@ export async function getStaticPaths() {
     paths: posts
       .filter((x) => x.isPublished)
       .map((x) => ({
-        params: { slug: x.Slug },
+        params: { slug: x.Slug || slugify(x.Name) },
       })),
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -104,5 +112,6 @@ export async function getStaticProps(ctx) {
       post: await resp.json(),
       metadata: post,
     },
+    revalidate: 1,
   };
 }
