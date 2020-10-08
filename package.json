@@ -19,7 +19,7 @@
     "tailwindcss": "^1.7.4"
   },
   "dependencies": {
-    "next": "^9.5.3",
+    "next": "^9.5.4",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-notion": "^0.8.1"
