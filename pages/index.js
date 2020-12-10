@@ -29,8 +29,8 @@ export default function Page({ posts }) {
       <div className="max-w-screen-sm mx-auto px-6 md:px-2">
         <section className="relative">
           <div
-            className="absolute left-0 top-0 -ml-48 -mt-24 transform opacity-25"
-            style={{ transform: 'rotate(-18deg)' }}>
+            className="absolute pointer-events-none select-none left-0 top-0 -ml-48 -mt-24 transform opacity-25"
+            style={{ transform: 'rotate(-18deg)', userDrag: 'none' }}>
             <Image
               priority={true}
               layout="fixed"
