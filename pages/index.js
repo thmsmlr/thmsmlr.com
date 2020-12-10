@@ -31,7 +31,14 @@ export default function Page({ posts }) {
           <div
             className="absolute left-0 top-0 -ml-48 -mt-24 transform opacity-25"
             style={{ transform: 'rotate(-18deg)' }}>
-            <Image width="488" height="211" src="/images/jazz-cup.png" alt="" />
+            <Image
+              priority={true}
+              layout="fixed"
+              width={488}
+              height={211}
+              src="/images/jazz-cup.png"
+              alt=""
+            />
           </div>
 
           <div className="relative z-30">

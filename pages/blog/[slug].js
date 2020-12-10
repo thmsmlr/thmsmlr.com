@@ -39,7 +39,7 @@ export default function Page({ post, metadata }) {
               <div className="mt-3 flex justify-between text-sm">
                 <p className="flex items-center space-x-2">
                   <div className="inline-block w-6 h-6 rounded-full overflow-hidden">
-                    <Image src="/images/profile-pic.jpg" width="50" height="50" />
+                    <Image src="/images/profile-pic.jpg" width={50} height={50} />
                   </div>
                   <span>
                     Thomas Millar /{' '}
