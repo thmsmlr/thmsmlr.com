@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import 'styles/tailwind.css';
 
-export default ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -21,11 +21,11 @@ export default ({ Component, pageProps }) => {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-30455574-1');
-          `
+          `,
           }}
         />
       </Head>
       <Component {...pageProps} />
     </>
   );
-};
+}

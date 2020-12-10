@@ -13,5 +13,5 @@ module.exports = {
   variants: {
     border: ['responsive', 'hover'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
