@@ -46,8 +46,8 @@ export default function Page({ posts }) {
               <HidingName />
             </h1>
             <p className="mt-4 text-gray-700">
-              This is where I explore ideas that interest me, and report my findings. You'll find
-              stuff about code, cooking, and whatever else i'm into these days.
+              This is where I explore ideas, and report my findings. You'll find stuff about code,
+              cooking, and whatever else i'm into these days.
             </p>
           </div>
         </section>
