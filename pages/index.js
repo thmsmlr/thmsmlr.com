@@ -15,6 +15,7 @@ const INSPIRING_PEOPLE = [
   { name: 'Guillermo Rauch', link: 'https://twitter.com/rauchg', met: false },
   { name: 'Scott Adams', link: 'https://twitter.com/ScottAdamsSays', met: false },
   { name: 'Nick Huber', link: 'https://twitter.com/sweatystartup', met: false },
+  { name: 'Adam Wathan', link: 'https://twitter.com/adamwathan', met: false },
   { name: 'Alec Strong', link: 'https://twitter.com/Strongolopolis', met: true },
 ];
 
