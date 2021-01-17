@@ -51,6 +51,7 @@ export async function getStaticProps(ctx) {
 
   let posts = await resp.json();
   posts = posts.filter((x) => x.isPublished);
+  posts.sort((a, b) => new Date(b.PublishedOn) - new Date(a.PublishedOn));
 
   return {
     props: {

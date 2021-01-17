@@ -7,6 +7,7 @@ import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 
 const INSPIRING_PEOPLE = [
+  { name: 'Chamath Palihapitiya', link: 'https://twitter.com/chamath', met: false },
   { name: 'George Hotz', link: 'https://www.instagram.com/georgehotz', met: false },
   { name: 'Ville Tuulos', link: 'https://twitter.com/vtuulos', met: false },
   { name: 'Marty Bell', link: 'https://twitter.com/marty', met: false },
