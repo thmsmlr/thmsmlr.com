@@ -24,7 +24,6 @@ export default function Page({ posts }) {
     <Layout>
       <Head>
         <title>thmsmlr – Thoughts n' stuff</title>
-        <link rel="stylesheet" href="/css/notion.css" />
       </Head>
       <Navigation masthead={false} />
       <div className="max-w-screen-sm mx-auto px-6 md:px-2">

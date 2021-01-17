@@ -20,7 +20,6 @@ export default function Page({ post, metadata }) {
   return (
     <Layout>
       <Head>
-        <link rel="stylesheet" href="/css/notion.css" />
         <title>thmsmlr – {metadata.Name}</title>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@thmsmlr" />
@@ -55,7 +54,7 @@ export default function Page({ post, metadata }) {
                 </p>
               </div>
             </header>
-            <main className="mt-8">
+            <main className="mt-8 prose">
               <NotionRenderer blockMap={post} />
             </main>
             <footer className="mt-8 text-center">
