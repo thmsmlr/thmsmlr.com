@@ -6,7 +6,7 @@ import Layout from 'layouts';
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 
-export default function Page({ posts }) {
+export default function Page({ postsByYear }) {
   return (
     <Layout>
       <Head>
@@ -23,16 +23,23 @@ export default function Page({ posts }) {
 
       <div className="mt-10 max-w-screen-sm mx-auto px-6 md:px-2">
         <div className="space-y-8">
-          {posts.map((post) => (
-            <Link href={`/blog/${post.Slug}`} key={post.Name}>
-              <a className="block group">
-                <h3 className="text-lg md:text-xl font-medium ">{post.Name}</h3>
-                <p className="mt-1 text-gray-700">{post.Description}</p>
-                <p className="mt-1 font-light text-gray-500 group-hover:underline">
-                  Read this Article &rarr;
-                </p>
-              </a>
-            </Link>
+          {postsByYear.map(([date, posts]) => (
+            <div className="" key={date}>
+              <span className="text-2xl font-light text-gray-500">{date}</span>
+              <div className="space-y-8 mt-2">
+                {posts.map((post) => (
+                  <Link href={`/blog/${post.Slug}`} key={post.Name}>
+                    <a className="block group">
+                      <h3 className="text-lg md:text-xl font-medium ">{post.Name}</h3>
+                      <p className="mt-1 text-gray-700">{post.Description}</p>
+                      <p className="mt-1 font-light text-gray-500 group-hover:underline">
+                        Read this Article &rarr;
+                      </p>
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -52,9 +59,22 @@ export async function getStaticProps(ctx) {
   posts = posts.filter((x) => x.isPublished);
   posts.sort((a, b) => new Date(b.PublishedOn) - new Date(a.PublishedOn));
 
+  let postsByYear = posts.reduce((acc, post) => {
+    let year = new Date(post.PublishedOn).getFullYear();
+    acc[year] = acc[year] || [];
+    acc[year].push(post);
+    return acc;
+  }, {});
+
+  postsByYear = Object.entries(postsByYear);
+  postsByYear.sort(([a, p1], [b, p2]) => b - a);
+  postsByYear.forEach(([_, posts]) => {
+    posts.sort((a, b) => new Date(b.PublishedOn) - new Date(a.PublishedOn));
+  });
+
   return {
     props: {
-      posts,
+      postsByYear,
     },
     revalidate: 1,
   };
