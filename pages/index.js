@@ -115,6 +115,12 @@ export default function Page({ posts }) {
               https://billclintonswag.com
             </a>
           </li>
+          <li className="flex items-center space-x-4">
+            <div className="ml-2 w-2 h-2 bg-gray-600 transform rotate-45"></div>
+            <a className="hover:underline" href="https://12ft.io" target="_blank">
+              https://12ft.io
+            </a>
+          </li>
         </ul>
       </div>
 
