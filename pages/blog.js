@@ -11,7 +11,6 @@ export default function Page({ posts }) {
     <Layout>
       <Head>
         <title>thmsmlr – Blog</title>
-        <link rel="stylesheet" href="/css/notion.css" />
       </Head>
       <Navigation />
 
